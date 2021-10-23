@@ -22,6 +22,38 @@ function computerPlay() {
 
 // console.log(computerPlay()); 
 
-// function playRound (playerSelection, computerSelecion) {
+//Create new variable to store player selection
 
-// }
+let playerSelection;
+
+playerSelection = prompt("Enter your selection: Rock, Scissors, or Paper:");
+
+console.log(playerSelection);
+
+//Creates new variable to store computer selection
+
+let computerSelection = computerPlay();
+
+
+// Determines who won the game, player or computer
+
+function playRound (playerSelection, computerSelecion) {
+
+    if (playerSelection === computerSelecion) {
+        return "It's a tie! Try again";
+    } else if (computerSelecion === "Rock" && playerSelection === "Scissors") {
+        return "You Lose! Rock beats Scissors";
+    } else if (computerSelecion === "Rock" && playerSelection === "Paper") {
+        return "You Win! Paper beats Rock";
+    } else if (computerSelecion === "Scissors" && playerSelection === "Paper") {
+        return "You Lose! Scissors beats Paper";
+    } else if (computerSelecion === "Scissors" && playerSelection === "Rock") {
+        return "You Win! Rock beats Scissors";
+    } else if (computerSelecion === "Paper" && playerSelection === "Rock") {
+        return "You Lose! Paper beats Rock";
+    } else if (computerSelecion === "Paper" && playerSelection === "Scissors") {
+        return "You Win! Scissors beats Paper";
+    }
+
+
+}
