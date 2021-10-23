@@ -17,22 +17,23 @@ function computerPlay() {
     } else {
         return "Scissors";
     }
-
 }
 
-// console.log(computerPlay()); 
+console.log(computerPlay()); 
 
 //Create new variable to store player selection
 
 let playerSelection;
 
-playerSelection = prompt("Enter your selection: Rock, Scissors, or Paper:");
+playerSelection = prompt("Enter your selection: Rock, Scissors, or Paper:").toUpperCase();
 
 console.log(playerSelection);
 
 //Creates new variable to store computer selection
 
 let computerSelection = computerPlay();
+
+// console.log(computerSelection);
 
 
 // Determines who won the game, player or computer
@@ -54,6 +55,6 @@ function playRound (playerSelection, computerSelecion) {
     } else if (computerSelecion === "Paper" && playerSelection === "Scissors") {
         return "You Win! Scissors beats Paper";
     }
-
-
 }
+
+// console.log(playRound(playerSelection, computerSelection));
