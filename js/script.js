@@ -35,8 +35,11 @@ let computerSelection = computerPlay();
 
 // console.log(computerSelection);
 
+//Create new function game that allows the player to play a 5 round game that keeps score and reports a winner or loser at the end. 
 
-// Determines who won the game, player or computer
+function game () {
+
+    // Plays one round of the game and determines who won the game: player or computer
 
 function playRound (playerSelection, computerSelecion) {
 
@@ -55,6 +58,9 @@ function playRound (playerSelection, computerSelecion) {
     } else if (computerSelecion === "PAPER" && playerSelection === "SCISSORS") {
         return "You Win! Scissors beats Paper";
     }
+}
+
+   
 }
 
 console.log(playRound(playerSelection, computerSelection));
