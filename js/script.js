@@ -39,6 +39,12 @@ let computerSelection = computerPlay();
 
 function game () {
 
+   // A for loop that calls function playRound 5 times
+    for (let i = 0; i < 6; i++) {
+        const element = array[index];
+        
+    }
+
     // Plays one round of the game and determines who won the game: player or computer
 
 function playRound (playerSelection, computerSelecion) {
