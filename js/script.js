@@ -83,18 +83,19 @@ function game () {
                  }
                 }
 
-                console.log(playRound(playerSelection, computerSelection));
+                // console.log(playRound(playerSelection, computerSelection));
             }
         
-            if (userScore > computerScore) {
+        // Determine who wins the game
+
+        if (userScore > computerScore) {
                 
-                alert("Congratulations!! You win the game");
+            alert("Congratulations!! You win the game");
             } else if (userScore = computerScore) {
                 alert("Draw!! Play again.");
             } else {
                 alert("You lose. Please try again.");
             }
-        console.log(score);
         
     }
 
