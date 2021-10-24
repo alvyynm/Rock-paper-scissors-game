@@ -11,11 +11,11 @@ function computerPlay() {
     //Assign Rock, Paper, Scissors to number 1, 2 and 3, respectively
 
     if (computerPick === 1) {
-        return "Rock";
+        return "ROCK";
     } else if (computerPick === 2){
-        return "Paper";
+        return "PAPER";
     } else {
-        return "Scissors";
+        return "SCISSORS";
     }
 }
 
@@ -42,19 +42,19 @@ function playRound (playerSelection, computerSelecion) {
 
     if (playerSelection === computerSelecion) {
         return "It's a tie! Try again";
-    } else if (computerSelecion === "Rock" && playerSelection === "Scissors") {
+    } else if (computerSelecion === "ROCK" && playerSelection === "SCISSORS") {
         return "You Lose! Rock beats Scissors";
-    } else if (computerSelecion === "Rock" && playerSelection === "Paper") {
+    } else if (computerSelecion === "ROCK" && playerSelection === "PAPER") {
         return "You Win! Paper beats Rock";
-    } else if (computerSelecion === "Scissors" && playerSelection === "Paper") {
+    } else if (computerSelecion === "SCISSORS" && playerSelection === "PAPER") {
         return "You Lose! Scissors beats Paper";
-    } else if (computerSelecion === "Scissors" && playerSelection === "Rock") {
+    } else if (computerSelecion === "SCISSORS" && playerSelection === "ROCK") {
         return "You Win! Rock beats Scissors";
-    } else if (computerSelecion === "Paper" && playerSelection === "Rock") {
-        return "You Lose! Paper beats Rock";
-    } else if (computerSelecion === "Paper" && playerSelection === "Scissors") {
+    } else if (computerSelecion === "PAPER" && playerSelection === "ROCK") {
+        return "You Lose! Paper beats ROCK";
+    } else if (computerSelecion === "PAPER" && playerSelection === "SCISSORS") {
         return "You Win! Scissors beats Paper";
     }
 }
 
-// console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection, computerSelection));
