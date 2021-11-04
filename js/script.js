@@ -39,6 +39,7 @@ function game () {
 
     // playerSelection = prompt("Enter your selection: Rock, Scissors, or Paper:").toUpperCase();
 
+    for (let i = 1; i <= 5; i++) {
         //Creates new constant and adds an event listener
 
         const buttons = document.querySelectorAll('button');
@@ -48,7 +49,8 @@ function game () {
             // and for each one we add a 'click' listener
             button.addEventListener('click', () => {
                 playerSelection = (button.id).toUpperCase();
-                console.log(playerSelection);
+                // console.log(playerSelection);
+                
                 // Plays one round of the game and determines who won the game: player or computer
 
         function playRound (playerSelection, computerSelecion) {
@@ -90,22 +92,32 @@ function game () {
             const div = document.querySelector('div');
             div.textContent = playRound(playerSelection, computerSelection);
             
+            console.log(userScore);
+            console.log(computerScore);
 
             // console.log(playRound(playerSelection, computerSelection));
             });
           });
+
+        };
         
         // Determine who wins the game
+        const finalScore = document.querySelector('.finalresults');
 
-        // if (userScore > computerScore) {
-                
-        //     alert("Congratulations!! You win the game");
-        //     } else if (userScore = computerScore) {
-        //         alert("Draw!! Play again.");
-        //     } else {
-        //         alert("You lose. Please try again.");
-        //     };
         
-    }
+        if (userScore > computerScore) {
+
+            finalScore.textContent = "Congratulations!! You win the game";
+                
+            // alert("Congratulations!! You win the game");
+            } else if (userScore = computerScore) {
+                finalScore.textContent = "Draw!! Play again.";
+                // alert("Draw!! Play again.");
+            } else {
+                finalScore.textContent = "You lose. Please try again.";
+                // alert("You lose. Please try again.");
+            };
+        
+    };
 
     console.log(game());
