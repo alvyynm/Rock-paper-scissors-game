@@ -1,18 +1,12 @@
-// Variables
-
 let computerPick;
 let playerSelection;
 let computerSelection;
 let userScore = 0;
 let computerScore = 0;
 
-//Create and initialize a varible to store user score and computer score
-
 //Creates new function that allows the player to play a 5 round game that keeps score and reports a winner or loser at the end. 
 
 function game () {
-
-        //Creates new constant and adds an event listener
 
         const buttons = document.querySelectorAll('button');
 
@@ -24,10 +18,8 @@ function game () {
 
                 function computerPlay() {
     
-                    // Create new variable and assign random number between 1 and 3 (incl.)
                     computerPick = Math.floor(Math.random() * 3);
                     console.log(computerPick);
-                    //Assign Rock, Paper, Scissors to number 1, 2 and 3, respectively
                 
                     if (computerPick === 0) {
                         return "ROCK";
@@ -38,8 +30,6 @@ function game () {
                     }
                 };
                 
-                //Create new variable to store player selection and computer selection
-                
                 computerSelection = computerPlay();
                 
  // Plays one round of the game and determines who won the game: player or computer
@@ -47,7 +37,7 @@ function game () {
         function playRound (playerSelection, computerSelection) {
 
 
-            if (playerSelection === computerSelection) {  
+            if (playerSelection === computerSelection) {   
                 return "It's a tie! Try again";
                     
             } else if (computerSelection === "ROCK" && playerSelection === "SCISSORS") {
@@ -94,9 +84,21 @@ function game () {
      
     //   const finalScore = document.querySelector('.finalresults');
  
-        // if (userScore > computerScore) {
+        // if (userScore == 5 || computerScore == 5) {
+
+               // declareWinner();
 
         //     // finalScore.textContent = "Congratulations!! You win the game";
+
+        // function declareWinner() {
+            // if (userScore > computerScore) {
+            //     finalScore.textContent = "You win! Mankind lives another day!!";
+            //     returnMainBtn.innerText = "Play Again";
+            //   } else {
+            //     endDesc.textContent = "You lost...who will save mankind now?";
+            //     returnMainBtn.innerText = "Try Again?";
+            //   }
+        //}
                 
         //     alert("Congratulations!! You win the game");
         //     } else if (userScore = computerScore) {
@@ -107,8 +109,15 @@ function game () {
         //         alert("You lose. Please try again.");
         //     };
 
-          });
 
+          });
     };    
 
 game();
+
+
+/* TO-DOs 
+  Make the game play a five round game
+  Provide a way to restart the game after the fifth round
+  DIsplay winner at the end of round five
+*/
