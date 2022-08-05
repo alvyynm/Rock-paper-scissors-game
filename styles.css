@@ -26,12 +26,12 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: aqua;
-    height: 100%;
+    background-color: #fdcb6e;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-content: center;
-  
+    /* align-content: center; */
+    align-items: center;
   }
   /*
     6. Improve media defaults
@@ -51,6 +51,8 @@
   */
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 150%;
   }
   /*
     9. Create a root stacking context
@@ -61,6 +63,11 @@
 
   /* / ***** Custom CSS ***** / */
 
-.heading-container {
-  
+.heading-container, .body-container {
+  max-width: 90%;
+  align-self: center;
+}
+
+button {
+  background-color: #ffeaa7;
 }
