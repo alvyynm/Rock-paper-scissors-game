@@ -96,36 +96,7 @@ function game() {
       }
 
       updateScore();
-      // console.log(playRound(playerSelection, computerSelection));
     });
-    // Determine who wins the game
-
-    //   const finalScore = document.querySelector('.finalresults');
-
-    // if (userScore == 5 || computerScore == 5) {
-
-    // declareWinner();
-
-    //     // finalScore.textContent = "Congratulations!! You win the game";
-
-    // function declareWinner() {
-    // if (userScore > computerScore) {
-    //     finalScore.textContent = "You win! Mankind lives another day!!";
-    //     returnMainBtn.innerText = "Play Again";
-    //   } else {
-    //     endDesc.textContent = "You lost...who will save mankind now?";
-    //     returnMainBtn.innerText = "Try Again?";
-    //   }
-    //}
-
-    //     alert("Congratulations!! You win the game");
-    //     } else if (userScore = computerScore) {
-    //         // finalScore.textContent = "Draw!! Play again.";
-    //         alert("Draw!! Play again.");
-    //     } else if (userScore < computerScore) {
-    //         // finalScore.textContent = "You lose. Please try again.";
-    //         alert("You lose. Please try again.");
-    //     };
   });
 }
 
