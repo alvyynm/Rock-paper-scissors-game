@@ -35,53 +35,64 @@ function game() {
       function playRound(playerSelection, computerSelection) {
         if (gameRound === 5) {
           document.querySelector("body").style.backgroundColor = "#60b347";
+          if (computerScore === userScore) {
+            document.querySelector(".message").textContent =
+              "Game Over!! It's a draw";
+          } else if (computerScore > userScore) {
+            document.querySelector(".message").textContent =
+              "Game Over!! You lose";
+          } else {
+            document.querySelector(".message").textContent =
+              "Game Over!! You win 🏆";
+          }
           return;
-        }
-        if (playerSelection === computerSelection) {
-          gameRound++;
-          return "It's a tie! Try again";
-        } else if (
-          computerSelection === "ROCK" &&
-          playerSelection === "SCISSORS"
-        ) {
-          computerScore++;
-          gameRound++;
-          return "You Lose! Rock beats Scissors";
-        } else if (
-          computerSelection === "ROCK" &&
-          playerSelection === "PAPER"
-        ) {
-          userScore++;
-          gameRound++;
-          return "You Win! Paper beats Rock";
-        } else if (
-          computerSelection === "SCISSORS" &&
-          playerSelection === "PAPER"
-        ) {
-          computerScore++;
-          gameRound++;
-          return "You Lose! Scissors beats Paper";
-        } else if (
-          computerSelection === "SCISSORS" &&
-          playerSelection === "ROCK"
-        ) {
-          userScore++;
-          gameRound++;
-          return "You Win! Rock beats Scissors";
-        } else if (
-          computerSelection === "PAPER" &&
-          playerSelection === "ROCK"
-        ) {
-          computerScore++;
-          gameRound++;
-          return "You Lose! Paper beats Rock";
-        } else if (
-          computerSelection === "PAPER" &&
-          playerSelection === "SCISSORS"
-        ) {
-          userScore++;
-          gameRound++;
-          return "You Win! Scissors beats Paper";
+        } else {
+          if (playerSelection === computerSelection) {
+            gameRound++;
+            return "It's a tie! Try again";
+          } else if (
+            computerSelection === "ROCK" &&
+            playerSelection === "SCISSORS"
+          ) {
+            computerScore++;
+            gameRound++;
+            return "You Lose! Rock beats Scissors";
+          } else if (
+            computerSelection === "ROCK" &&
+            playerSelection === "PAPER"
+          ) {
+            userScore++;
+            gameRound++;
+            return "You Win! Paper beats Rock";
+          } else if (
+            computerSelection === "SCISSORS" &&
+            playerSelection === "PAPER"
+          ) {
+            computerScore++;
+            gameRound++;
+            return "You Lose! Scissors beats Paper";
+          } else if (
+            computerSelection === "SCISSORS" &&
+            playerSelection === "ROCK"
+          ) {
+            userScore++;
+            gameRound++;
+            return "You Win! Rock beats Scissors";
+          } else if (
+            computerSelection === "PAPER" &&
+            playerSelection === "ROCK"
+          ) {
+            computerScore++;
+            gameRound++;
+            return "You Lose! Paper beats Rock";
+          } else if (
+            computerSelection === "PAPER" &&
+            playerSelection === "SCISSORS"
+          ) {
+            userScore++;
+            gameRound++;
+            return "You Win! Scissors beats Paper";
+          }
         }
       }
 
