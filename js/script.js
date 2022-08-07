@@ -3,6 +3,7 @@ let playerSelection;
 let computerSelection;
 let userScore = 0;
 let computerScore = 0;
+let gameRound = 0;
 
 //Creates new function that allows the player to play a 5 round game that keeps score and reports a winner or loser at the end.
 
@@ -32,43 +33,54 @@ function game() {
       // Plays one round of the game and determines who won the game: player or computer
 
       function playRound(playerSelection, computerSelection) {
+        if (gameRound === 5) {
+          document.querySelector("body").style.backgroundColor = "#60b347";
+          return;
+        }
         if (playerSelection === computerSelection) {
+          gameRound++;
           return "It's a tie! Try again";
         } else if (
           computerSelection === "ROCK" &&
           playerSelection === "SCISSORS"
         ) {
           computerScore++;
+          gameRound++;
           return "You Lose! Rock beats Scissors";
         } else if (
           computerSelection === "ROCK" &&
           playerSelection === "PAPER"
         ) {
           userScore++;
+          gameRound++;
           return "You Win! Paper beats Rock";
         } else if (
           computerSelection === "SCISSORS" &&
           playerSelection === "PAPER"
         ) {
           computerScore++;
+          gameRound++;
           return "You Lose! Scissors beats Paper";
         } else if (
           computerSelection === "SCISSORS" &&
           playerSelection === "ROCK"
         ) {
           userScore++;
+          gameRound++;
           return "You Win! Rock beats Scissors";
         } else if (
           computerSelection === "PAPER" &&
           playerSelection === "ROCK"
         ) {
           computerScore++;
+          gameRound++;
           return "You Lose! Paper beats Rock";
         } else if (
           computerSelection === "PAPER" &&
           playerSelection === "SCISSORS"
         ) {
           userScore++;
+          gameRound++;
           return "You Win! Scissors beats Paper";
         }
       }
@@ -85,36 +97,7 @@ function game() {
       }
 
       updateScore();
-      // console.log(playRound(playerSelection, computerSelection));
     });
-    // Determine who wins the game
-
-    //   const finalScore = document.querySelector('.finalresults');
-
-    // if (userScore == 5 || computerScore == 5) {
-
-    // declareWinner();
-
-    //     // finalScore.textContent = "Congratulations!! You win the game";
-
-    // function declareWinner() {
-    // if (userScore > computerScore) {
-    //     finalScore.textContent = "You win! Mankind lives another day!!";
-    //     returnMainBtn.innerText = "Play Again";
-    //   } else {
-    //     endDesc.textContent = "You lost...who will save mankind now?";
-    //     returnMainBtn.innerText = "Try Again?";
-    //   }
-    //}
-
-    //     alert("Congratulations!! You win the game");
-    //     } else if (userScore = computerScore) {
-    //         // finalScore.textContent = "Draw!! Play again.";
-    //         alert("Draw!! Play again.");
-    //     } else if (userScore < computerScore) {
-    //         // finalScore.textContent = "You lose. Please try again.";
-    //         alert("You lose. Please try again.");
-    //     };
   });
 }
 
