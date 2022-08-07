@@ -34,6 +34,7 @@ function game() {
 
       function playRound(playerSelection, computerSelection) {
         if (gameRound === 5) {
+          document.querySelector("body").style.backgroundColor = "#60b347";
           return;
         }
         if (playerSelection === computerSelection) {
