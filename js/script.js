@@ -7,6 +7,8 @@ let gameRound = 0;
 
 //Creates new function that allows the player to play a 5 round game that keeps score and reports a winner or loser at the end.
 
+const resetBtn = document.querySelector(".reset_btn");
+
 function game() {
   const buttons = document.querySelectorAll("button");
 
@@ -117,6 +119,15 @@ function game() {
 }
 
 game();
+
+// Game reset functionality
+resetBtn.addEventListener("click", function () {
+  gameRound = 0;
+  computerScore = 0;
+  userScore = 0;
+  document.getElementById("pScore").textContent = 0;
+  document.getElementById("cScore").textContent = 0;
+});
 
 /* TO-DOs 
   Make the game play a five round game
