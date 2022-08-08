@@ -45,6 +45,10 @@ function game() {
             document.querySelector(".message").textContent =
               "Game Over!! You win 🏆";
           }
+          document.querySelector("#rock").style.display = "none";
+          document.querySelector("#paper").style.display = "none";
+          document.querySelector("#scissors").style.display = "none";
+          document.querySelector(".display_message").style.display = "none";
           return;
         } else {
           if (playerSelection === computerSelection) {
